@@ -6,13 +6,13 @@ from botocore.exceptions import BotoCoreError, ClientError
 # AWS S3 bucket name and upload folder path
 BUCKET_NAME = 'aws-grocery-tracker-uploads-project03-01'
 UPLOAD_FOLDER = 'AWS-Grocery-Tracker-Project/1.0.0/'
-RAW_IMAGES_PATH = '/home/ggc/greengrassv2/data/raw_images/cache/'  # Directory containing images to upload
+RAW_IMAGES_PATH = '/home/ggc/greengrassv2/data/cache/'  # Directory containing images to upload
 
 # Initialize S3 client
 s3_client = boto3.client('s3')
 
 def upload_files():
-    """Upload all files from the raw_images directory to the designated S3 bucket."""
+    """Upload all files from the data/cache/ directory to the designated S3 bucket."""
     # Check if directory exists
     if not os.path.isdir(RAW_IMAGES_PATH):
         print(f"Directory {RAW_IMAGES_PATH} does not exist, cannot upload files.")

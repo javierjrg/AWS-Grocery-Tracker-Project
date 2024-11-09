@@ -6,7 +6,7 @@ from botocore.exceptions import BotoCoreError, ClientError
 # AWS S3 bucket name and upload folder path
 BUCKET_NAME = 'aws-grocery-tracker-uploads-project03-01'
 UPLOAD_FOLDER = 'AWS-Grocery-Tracker-Project/1.0.0/'
-RAW_IMAGES_PATH = '/home/ggc/greengrassv2/data/raw_images/'  # Directory containing images to upload
+RAW_IMAGES_PATH = '/home/ggc/greengrassv2/data/raw_images/cache/'  # Directory containing images to upload
 
 # Initialize S3 client
 s3_client = boto3.client('s3')
